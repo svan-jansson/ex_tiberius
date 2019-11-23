@@ -1,0 +1,7 @@
+sql-server:
+  image: mcr.microsoft.com/mssql/server:2017-latest
+  environment:
+    - ACCEPT_EULA=Y
+    - SA_PASSWORD=Weak1234
+  ports:
+    - "1433:1433"
