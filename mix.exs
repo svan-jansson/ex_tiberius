@@ -13,6 +13,13 @@ defmodule ExTiberius.MixProject do
         maintainers: ["Svan Jansson"],
         licenses: ["MIT"],
         links: %{Github: "https://github.com/svan-jansson/ex_tiberius"}
+      ],
+      compilers: [:rustler] ++ Mix.compilers(),
+      rustler_crates: [
+        ex_tiberius_nif: [
+          path: "native/ex_tiberius_nif",
+          mode: if(Mix.env() == :prod, do: :release, else: :debug)
+        ]
       ]
     ]
   end
