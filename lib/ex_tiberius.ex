@@ -1,18 +1,5 @@
 defmodule ExTiberius do
-  @moduledoc """
-  Documentation for ExTiberius.
-  """
-
-  @doc """
-  Hello world.
-
-  ## Examples
-
-      iex> ExTiberius.hello()
-      :world
-
-  """
-  def hello do
-    :world
+  def connect(connection_string) do
+    {:error, "Not implemented yet"}
   end
 end
